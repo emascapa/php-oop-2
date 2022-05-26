@@ -5,6 +5,8 @@ class Product {
     protected $price;
     protected $availability;
 
+    protected $image = 'https://picsum.photos/seed/picsum/300/300';
+
     
     function __construct(String $name, Float $price, Int $availability)
     {
@@ -32,6 +34,10 @@ class Product {
     }
     public function getAvailability() {
         return $this->availability;    
+    }
+
+    public function getImage() {
+        return $this->image;    
     }
 
 }

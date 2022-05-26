@@ -4,6 +4,8 @@ class Food extends Product {
 
     protected $expiringDate;
 
+    protected $typeID = 0;
+
     function __construct(String $name, Float $price, Int $availability, String $expiringDate)
     {
         Product::__construct($name, $price, $availability);
@@ -15,5 +17,9 @@ class Food extends Product {
     }
     public function getExpiringDate() {
         return $this->expiringDate;    
+    }
+
+    public function getTypeID() {
+        return $this->typeID;    
     }
 }
