@@ -6,10 +6,33 @@
 
     <main class="bg-light py-5">
         <div class="container">
-            <div class="row row-cols-3 g-3">
+            <div class="row row-cols-3 g-3 py-2">
+                <div class="col d-flex align-items-center justify-content-center p-2">
+                    <div style="height: 20px; width: 20px" class="bg-primary rounded rounded-4 me-1"></div>
+                    <span>Food</span>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center p-2">
+                    <div style="height: 20px; width: 20px" class="bg-danger rounded rounded-4 me-1"></div>
+                    <span>Games</span>
+                </div>
+                <div class="col d-flex align-items-center justify-content-center p-2">
+                    <div style="height: 20px; width: 20px" class="bg-success rounded rounded-4 me-1"></div>
+                    <span>Cosmetic</span>
+                </div>
+
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
                 <?php foreach($productList as $product) {?>
                     <div class="col">
-                        <div class="card">
+                        <div class="h-100 card border-4 <?php
+                        if ($product->getTypeID()==0){
+                            echo 'border-primary';
+                        } elseif ($product->getTypeID()==1) {
+                            echo 'border-danger';
+                        } else {
+                            echo 'border-success';
+                        }
+                        ?>">
                             <img src="<?= $product->getImage(); ?>" alt="">
                             <div class="card-body">
                                 <h4><?= $product->getName(); ?></h4>
@@ -20,7 +43,7 @@
                     </div>
                 <?php }?>
             </div>
-        </div>
+        </>
     </main>
 
 

@@ -4,7 +4,7 @@
 require_once __DIR__ . '/db.php';
 
 
-var_dump($productList);
+//var_dump($productList);
 
 include __DIR__ . '/layout/head.php';
 
