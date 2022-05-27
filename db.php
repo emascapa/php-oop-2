@@ -20,3 +20,23 @@ $productList = [
     new Cosmetic('Awesome Soap', 9.3, 2, 'Garnier'),
     new Cosmetic('Awesome teethbrush', 3, 7, 'Sammontana'),
 ];
+
+/* 
+IL PRIMO PRODOTTO HA 10 ARTICOLI
+SE NE AGGIUNGI 11 AL CARRELLO OTTIENI 
+L'EXCEPTION CREATA NEL METODO 
+*/
+
+/* 
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+$productList[0]->addOneItemToBasket();
+ */
