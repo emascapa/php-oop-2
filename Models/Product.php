@@ -3,7 +3,7 @@
 trait BasicInfo {
     protected $name;
     protected $price;
-    protected $availability;
+    protected static $availability;
 
     public function setName(String $newName) {
         $this->name = $newName;    
@@ -24,6 +24,16 @@ trait BasicInfo {
     }
     public function getAvailability() {
         return $this->availability;    
+    }
+
+    public function addOneItemToBasket() {
+        if ($this->getAvailability() != 0) {
+
+            $this->setAvailability($this->getAvailability() - 1);
+
+        } else {
+            throw new Exception ('Non ci sono più prodotti di questo tipo, non puoi aggiungere il prodotto al carrello');
+        }
     }
 
 }
