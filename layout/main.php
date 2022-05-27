@@ -1,10 +1,10 @@
 <body>
 
-    <section class="position-absolute basket_div" style="top: 40px; right: 30px;">
+<!--     <section class="position-absolute basket_div" style="top: 40px; right: 30px;">
         <div class="px-5 py-2 d-inline bg-light border border-4 border-warning rounded-pill">
             prodotti qui
         </div>
-    </section>
+    </section> -->
 
     <header class="py-5 bg-dark">
         <h1 class="display-4 text-center text-light">Don't buy stuff here</h1>
@@ -42,18 +42,20 @@
                                                         ?>">
                             <img src="<?= $product->getImage(); ?>" alt="">
                             <div class="card-body d-flex flex-column justify-content-between text-center">
+
                                 <div>
                                     <h4><?= $product->getName(); ?></h4>
                                     <p>Prezzo: <?= $product->getPrice(); ?> €</p>
                                 </div>
-                                <small>Disponibilità: <?= $product->getAvailability(); ?> pezzi</small>
+
+                                <small class="">Disponibilità: <?= $product->getAvailability(); ?> pezzi</small>
+
                             </div>
                         </div>
                     </div>
                 <?php } ?>
             </div>
-            </>
+        </div>
     </main>
-
 
 </body>
